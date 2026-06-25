@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+#define MAX 5
+
+int main() {
+    int queue[MAX], front = -1, rear = -1;
+    int item, i;
+
+    /* ENQUEUE */
+    printf("Enter element to ENQUEUE: ");
+    scanf("%d", &item);
+
+    front = rear = 0;
+    queue[rear] = item;
+
+    /* DISPLAY */
+    printf("Queue elements: ");
+    for(i = front; i <= rear; i++)
+        printf("%d ", queue[i]);
+
+    /* DEQUEUE */
+    item = queue[front];
+    front++;
+
+    printf("\nDeleted element: %d", item);
+
+    return 0;
+}
